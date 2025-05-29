@@ -91,30 +91,30 @@
           <h1 class="title is-1 publication-title">SpineBench: A Comprehensive Benchmark for Fine-Grained Analysis of Spinal Pathologies</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Chenghanyu Zhang</a>,</span>
+              <a href="">Chenghanyu Zhang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="">Zekun Li</a>,</span>
+              <a href="">Zekun Li</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="">Peipei Li</a>,
+              <a href="">Peipei Li</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Xing Cui</a>,
+              <a href="">Xing Cui</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Shuhan Xia</a>,
+              <a href="">Shuhan Xia</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Yiqiao Zhang</a>,
+              <a href="">Yiqiao Zhang</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="">Qianyuan Zhuang</a>
+              <a href="">Qianyuan Zhuang</a><sup>3</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Beijing University of Posts and Telecommunications,</span>
-            <span class="author-block">University of California,Santa Barbara</span>
-            <span class="author-block">Peking Union Medical College Hospital</span>
+            <span class="author-block"><sup>1</sup>Beijing University of Posts and Telecommunications,</span>
+            <span class="author-block"><sup>2</sup>University of California,Santa Barbara</span>
+            <span class="author-block"><sup>3</sup>Peking Union Medical College Hospital</span>
           </div>
 
           <div class="column has-text-centered">
@@ -148,7 +148,8 @@
                   <span>Video</span>
                 </a>
               </span> -->
-              <!-- Code Link. -->
+
+              <!-- Code Link. 
               <span class="link-block">
                 <a href="https://github.com/zhangchenghanyu/SpineBench.github.io"
                    class="external-link button is-normal is-rounded is-dark">
@@ -157,7 +158,8 @@
                   </span>
                   <span>Code</span>
                   </a>
-              </span>
+              </span> -->
+
               <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://huggingface.co/datasets/Silversorrow/SpineBench"
@@ -258,10 +260,15 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">VQA Generation Pipeline</h2>
-          <p>Each Visual Question Answering (VQA) pair is generated in three steps:</p>
-            <p>Diverse question generation using Gemini-2.5-Pro.</p>
-            <p>Distractor options via visual similarity (SigLIP2-based).</p>
-            <p>Manual validation and integration of "Healthy" option.</p>
+          <p>1) Dataset Construction and Standardization: Compile SpineBench by integrating multiple public spinal disease datasets, covering 11 distinct diseases. 
+                Standardize images to 2D RGB format and meticulously revise disease labels based on MeSH and expert clinical guidance to ensure quality and consistency.</p>
+            <p>2) Diverse VQA Pair Generation: For diagnosis and localization tasks, 
+                  utilize Gemini-2.5-Pro to formulate multiple semantically equivalent questions with varied expressions for core query intents, 
+                  evaluating the model's semantic understanding.</p>
+            <p>3) High-Confusion Distractor Option Creation: Generate visually plausible and highly confusable distractor options by identifying diseases visually similar to the query image (using SigLIP2 features and similarity metrics). 
+                  Mandatorily include a "Healthy" option to rigorously assess the model's differential diagnostic capabilities.</p>
+            <p>4) Validation and Final Benchmark Assembly: Manually verify all generated VQA pairs to ensure data quality and benchmark validity. 
+                  This culminates in the final SpineBench, featuring tens of thousands of high-quality VQA pairs specifically for spinal disease diagnosis and lesion localization tasks.</p>
           <img src="./static/images/liucheng.png" alt="VQA Generation Pipeline Diagram">
       </div>
     </div>
