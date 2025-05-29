@@ -6,7 +6,7 @@
         content="SpineBench: A Comprehensive Benchmark for Fine-Grained Analysis of Spinal Pathologies">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>SpineBench: A Comprehensive Benchmark for Fine-Grained Analysis of Spinal Pathologies</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -135,7 +135,7 @@
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>ArXiv</span>
                 </a>
               </span>
               <!-- Video Link. -->
@@ -150,7 +150,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/zhangchenghanyu/SpineBench.github.io"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -160,7 +160,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://huggingface.co/datasets/Silversorrow/SpineBench"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -193,8 +193,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            With the increasing integration of Large Vision-Language Models (LVLMs) into the medical field, the effective evaluation of their performance is critical in specialized sub-domains. However, due to inherent disciplinary barriers, existing benchmarks primarily assess general medical tasks, inadequately capturing performance in nuanced areas like the spine. To address this, we introduce SpineBench, a comprehensive Visual Question Answering (VQA) benchmark specifically designed for the fine-grained analysis and evaluation of LVLM in the spinal domain. SpineBench comprises 64,878 QA pairs from 40,263 images, covering 12 spinal diseases through two critical clinical tasks: spinal disease diagnosis and spinal lesion localization. 
-            SpineBench is built by integrating and standardizing image-label pairs from open-source spinal disease datasets, and generates highly confusable distractors for each VQA pair using visual similarity analysis. We evaluate 12 leading LVLMs on SpineBench. The results reveal that these models generally exhibit poor performance in the spine domain, highlighting current limitations of LVLM and guiding future improvements in spinal medicine applications.
+            With increasing integration of Large Vision-Language Models (LVLMs) into the medical field, comprehensive evaluation of their performance in various medical domains becomes critical. However, due to disciplinary barriers, existing benchmarks primarily assess general medical tasks, inadequately capturing performance in nuanced areas like the spine. To address this, we introduce SpineBench, a comprehensive Visual Question Answering (VQA) benchmark designed for fine-grained analysis and evaluation of LVLM in the spinal domain. SpineBench comprises 64,878 QA pairs from 40,263 spine images, covering 11 spinal diseases through two critical clinical tasks: spinal disease diagnosis and spinal lesion localization. SpineBench is built by integrating and standardizing image-label pairs from open-source spinal disease datasets, and samples challenging hard negative options for each VQA pair based on visual similarity (similar but not same disease). We evaluate 12 leading LVLMs on SpineBench. The results reveal that these models exhibit poor performance in the spine domain, highlighting limitations of current LVLM in spine domain and guiding future improvements in spinal medicine applications.
           </p>
         </div>
       </div>
@@ -248,7 +247,7 @@
             </tr>
           </tbody>
         </table>
-
+       <img src="" alt="Dataset">
       </div>
     </div>
   </div>
@@ -285,7 +284,20 @@
   </div> 
 </div>
 
+<div class="section" id="Experiment">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <img src="./static/images/sim.png" alt="Experiments">
+      </div>
+    </div>
+  </div>
+</div>
 
+<h2 class="subtitle has-text-centered">Results of different LVLMs on SpineBench</h2>
+
+<!--
 <div class="section" id="image-similarity">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -297,6 +309,9 @@
     </div>
   </div>
 </div>
+-->
+
+
 
 </body>
 </html>
